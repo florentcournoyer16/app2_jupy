@@ -1,0 +1,18 @@
+[tool.black]
+line-length = 100  # Preferred line length
+skip-string-normalization = false  # Normalize string quotes (True to skip)
+target-version = ['py38']  # Target Python version
+include = '\.pyi?$'  # Include Python files and type stubs
+exclude = '''(
+    /(
+        .git
+        |\.venv
+        |build
+        |dist
+        |__pycache__
+    )/
+)'''
+# Additional options
+check = false  # Set to true to run Black in check mode without modifying files
+verbose = true  # Enable verbose output for debugging
+safe = true  # Avoid making potentially unsafe changes (e.g., modifying source code)
